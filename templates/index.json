@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "home": {
+      "type": "home-complete",
+      "settings": {}
+    }
+  },
+  "order": [
+    "home"
+  ]
+}

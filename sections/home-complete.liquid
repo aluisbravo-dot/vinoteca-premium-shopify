@@ -1,0 +1,64 @@
+<section class="vp-hero vp-hero-carousel" data-vp-hero>
+  <div class="vp-hero-slides">
+    {% assign hero_images = 'hero-vino-pour.jpg|hero-vinedo-atardecer.jpg|hero-bodega-barricas.jpg|hero-brindis.jpg' | split: '|' %}
+    {% assign hero_titles = 'El arte de descubrir un buen vino.|El origen también se disfruta.|Tiempo, madera y carácter.|Cada encuentro merece un brindis.' | split: '|' %}
+    {% assign hero_texts = 'Explora variedades y descubre aromas, regiones y momentos que hacen especial cada botella.|Recorre paisajes de viñedos y conoce la tradición que acompaña cada variedad.|Descubre el encanto de las bodegas, la crianza y las barricas.|Una selección para compartir, aprender y disfrutar con responsabilidad.' | split: '|' %}
+    {% for image_name in hero_images %}
+      <div class="vp-hero-slide{% if forloop.first %} is-active{% endif %}">
+        <img class="vp-hero-image" src="{{ image_name | asset_url }}" alt="Fotografía de viñedos y cultura del vino" {% if forloop.first %}loading="eager"{% else %}loading="lazy"{% endif %}>
+        <div class="vp-hero-shade"></div>
+        <div class="vp-wrap vp-hero-copy">
+          <p class="vp-eyebrow">VINOTECA PREMIUM · SELECCIÓN · ORIGEN</p>
+          <h1>{{ hero_titles[forloop.index0] }}</h1>
+          <p>{{ hero_texts[forloop.index0] }}</p>
+          <div class="vp-actions"><a class="vp-btn" href="/collections/all">Explorar catálogo</a><a class="vp-btn vp-btn-outline" href="{{ routes.root_url }}#cultura">Descubrir la cultura del vino</a></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="nosotros" class="vp-section vp-wrap">
+  <p class="vp-eyebrow">VINOTECA PREMIUM</p><h2>Una experiencia para descubrir</h2>
+  <p class="vp-lead">Un espacio digital dedicado a la cultura del vino: variedades, perfiles, regiones y sugerencias de maridaje presentadas de forma clara y elegante.</p>
+  <div class="vp-two-col"><img src="{{ 'botellas-seleccion.jpg' | asset_url }}" alt="Selección de botellas de vino" loading="lazy"><div><h3>Origen, carácter y tradición</h3><p>Cada variedad tiene una personalidad propia. Conoce sus aromas, estructura y formas de disfrutarla con información sencilla y responsable.</p><a class="vp-text-link" href="{{ routes.root_url }}#nosotros">Conoce nuestra historia →</a></div></div>
+</section>
+
+<section id="variedades" class="vp-section vp-section-cream"><div class="vp-wrap">
+  <p class="vp-eyebrow">CATÁLOGO · CULTURA VINÍCOLA</p><h2>Explora los vinos por categoría</h2><p class="vp-gallery-intro">Cada familia tiene su carácter. Descubre variedades, notas habituales y sugerencias para acompañarlas.</p>
+  <div class="vp-gallery">
+    <article class="vp-gallery-card"><img src="{{ 'variedad-malbec-vinedo.jpg' | asset_url }}" alt="Vino Malbec y viñedo" loading="lazy"><h3>Malbec</h3><p>Fruta madura, ciruela y notas suaves de especias.</p></article>
+    <article class="vp-gallery-card"><img src="{{ 'variedad-cabernet-tinto.jpg' | asset_url }}" alt="Cabernet Sauvignon" loading="lazy"><h3>Cabernet Sauvignon</h3><p>Estructura y carácter, con notas de frutos negros.</p></article>
+    <article class="vp-gallery-card"><img src="{{ 'variedad-chardonnay-blanco.jpg' | asset_url }}" alt="Chardonnay" loading="lazy"><h3>Chardonnay</h3><p>Versátil, desde perfiles cítricos hasta notas cremosas.</p></article>
+    <article class="vp-gallery-card"><img src="{{ 'variedad-rose-atardecer.jpg' | asset_url }}" alt="Vino rosado" loading="lazy"><h3>Rosé</h3><p>Fresco y frutal, para distintas ocasiones.</p></article>
+  </div><p><a class="vp-btn" href="{{ routes.root_url }}#variedades">Conocer variedades</a></p>
+</div></section>
+
+<section id="cultura" class="vp-section vp-wrap"><div class="vp-origin-grid">
+  <div><p class="vp-eyebrow">EL ORIGEN DEL VINO</p><h2>De la vid a cada copa</h2><p>Todo comienza en el viñedo. La variedad de uva, el clima, el suelo y el trabajo de quienes cultivan la vid influyen en el color, los aromas y el carácter de cada vino.</p><p>Después llegan la vendimia, la selección de uvas, la fermentación y, en algunos casos, la crianza en barricas.</p><a class="vp-text-link" href="{{ routes.root_url }}#cultura">Explorar la cultura del vino →</a></div>
+  <img src="{{ 'hero-vinedo-atardecer.jpg' | asset_url }}" alt="Viñedos al atardecer" loading="lazy"><img src="{{ 'hero-bodega-barricas.jpg' | asset_url }}" alt="Barricas de bodega" loading="lazy">
+</div></section>
+
+
+<section class="vp-section vp-wine-categories"><div class="vp-wrap">
+<p class="vp-eyebrow">SELECCIÓN DE VINOS</p><h2>Una selección para cada momento</h2>
+<div class="vp-wine-columns">
+<article class="vp-wine-column vp-wine-red"><span class="vp-wine-kicker">VINOTECA PREMIUM</span><h3>Vinos tintos</h3><p>Carácter, cuerpo y profundidad.</p><img src="{{ 'variedad-cabernet-tinto.jpg' | asset_url }}" alt="Selección de vinos tintos" loading="lazy"><ul><li>Malbec</li><li>Merlot</li><li>Cabernet Sauvignon</li><li>Tempranillo</li></ul></article>
+<article class="vp-wine-column vp-wine-white"><span class="vp-wine-kicker">VINOTECA PREMIUM</span><h3>Vinos blancos</h3><p>Frescura y notas aromáticas.</p><img src="{{ 'variedad-chardonnay-blanco.jpg' | asset_url }}" alt="Selección de vinos blancos" loading="lazy"><ul><li>Chardonnay</li><li>Sauvignon Blanc</li><li>Riesling</li><li>Pinot Grigio</li></ul></article>
+<article class="vp-wine-column vp-wine-rose"><span class="vp-wine-kicker">VINOTECA PREMIUM</span><h3>Rosados y otros</h3><p>Estilos ligeros y burbujeantes.</p><img src="{{ 'variedad-rose-atardecer.jpg' | asset_url }}" alt="Selección de vinos rosados y espumantes" loading="lazy"><ul><li>Rosé</li><li>Espumante</li><li>Brut</li><li>Prosecco</li></ul></article>
+</div></div></section>
+<section id="promociones" class="vp-section vp-wrap"><div class="vp-campaign"><img src="{{ 'campana-especial-calidad-vinoteca.jpg' | asset_url }}" alt="Campaña especial Vinoteca Premium" loading="lazy"><div><p class="vp-eyebrow">CAMPAÑA ESPECIAL · VINOTECA PREMIUM</p><h2>Esto sí es calidad.</h2><p>Una pieza visual especial para celebrar el gusto por descubrir y compartir un buen vino.</p><a class="vp-btn" href="{{ routes.root_url }}#promociones">Ver promociones</a></div></div></section>
+
+<section id="catalogo" class="vp-section vp-section-cream"><div class="vp-wrap"><p class="vp-eyebrow">CATÁLOGO VINOTECA PREMIUM</p><h2>Explora nuestra selección</h2><div class="vp-products">
+{% assign chosen = collections['all'] %}
+{% if chosen != blank and chosen.products_count > 0 %}
+{% for product in chosen.products limit: 4 %}<article class="vp-product"><a href="{{ product.url }}">{% if product.featured_image %}<img src="{{ product.featured_image | image_url: width: 700 }}" alt="{{ product.title | escape }}" loading="lazy">{% endif %}<h3>{{ product.title }}</h3></a><p>{{ product.price | money }}</p><a class="vp-text-link" href="{{ product.url }}">Ver producto →</a></article>{% endfor %}
+{% else %}<p>Próximamente podrás explorar aquí los productos de nuestra tienda. El catálogo se activa al agregar productos en Shopify.</p>{% endif %}
+</div><a class="vp-btn" href="/collections/all">Ver catálogo completo</a></div></section>
+
+<section id="video-presentacion" class="vp-section vp-wrap vp-video-feature"><p class="vp-eyebrow">PRESENTACIÓN AUDIOVISUAL</p><h2>Conoce Vinoteca Premium</h2><p>Una breve presentación sobre el origen, la diversidad y la cultura del vino.</p><video class="vp-promo-video" controls playsinline preload="metadata" poster="{{ 'video-poster.jpg' | asset_url }}" aria-label="Vídeo promocional de Vinoteca Premium"><source src="{{ 'vinoteca-premium-video-promocional.mp4' | asset_url }}" type="video/mp4">Tu navegador no admite vídeo HTML5.</video></section>
+{% schema %}{"name":"Inicio Vinoteca completo","settings":[],"presets":[{"name":"Inicio Vinoteca completo"}]}{% endschema %}
+
+<section id="contacto" class="vp-section vp-section-cream"><div class="vp-wrap vp-contact-layout">
+<div class="vp-contact-copy"><p class="vp-eyebrow">VINOTECA PREMIUM · CONTACTO</p><h2>Conversemos sobre el mundo del vino</h2><p>Estamos al costado del IESTP Manuel Seoane Corrales, San Juan de Lurigancho, Lima, Perú.</p><p><strong>Teléfono:</strong> +51 929 184 435</p><div class="vp-socials">{% if settings.facebook != blank %}<a class="vp-social-icon" href="{{ settings.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">f</a>{% endif %}{% if settings.instagram != blank %}<a class="vp-social-icon" href="{{ settings.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">◎</a>{% endif %}{% if settings.tiktok != blank %}<a class="vp-social-icon" href="{{ settings.tiktok }}" target="_blank" rel="noopener" aria-label="TikTok">♪</a>{% endif %}</div></div>
+<form class="vp-contact-form" data-vp-whatsapp-form data-wa-number="51929184435"><label for="vp-home-name">Nombre</label><input id="vp-home-name" name="name" type="text" required maxlength="100" placeholder="Tu nombre"><label for="vp-home-email">Correo electrónico</label><input id="vp-home-email" name="email" type="email" required maxlength="150" placeholder="tu@correo.com"><label for="vp-home-subject">Asunto</label><input id="vp-home-subject" name="subject" type="text" required maxlength="150" placeholder="Motivo de tu consulta"><label for="vp-home-message">Mensaje</label><textarea id="vp-home-message" name="message" required maxlength="2000" rows="5" placeholder="Escribe tu consulta..."></textarea><button class="vp-btn" type="submit">Enviar por WhatsApp</button><p class="vp-form-note">Se abrirá WhatsApp con el mensaje preparado para que confirmes el envío.</p></form></div></section>
