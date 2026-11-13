@@ -1,0 +1,13 @@
+<div class="vp-topbar"><div class="vp-wrap vp-topbar-inner"><span>Lima, Perú · <a href="tel:+51929184435">+51 929 184 435</a> · <a href="mailto:{{ settings.email | escape }}">{{ settings.email }}</a></span><div class="vp-topbar-links">{% if settings.facebook != blank %}<a aria-label="Facebook" href="{{ settings.facebook }}" target="_blank" rel="noopener">f</a>{% endif %}{% if settings.instagram != blank %}<a aria-label="Instagram" href="{{ settings.instagram }}" target="_blank" rel="noopener">◎</a>{% endif %}<a aria-label="WhatsApp" href="{{ settings.whatsapp | default: 'https://wa.me/51929184435' }}" target="_blank" rel="noopener">◉</a></div></div></div>
+<header class="vp-header"><div class="vp-wrap vp-header-inner">
+<a class="vp-brand" href="{{ routes.root_url }}" aria-label="Vinoteca Premium - Inicio">
+{% if settings.logo %}<img class="vp-brand-mark" src="{{ settings.logo | image_url: width: 180 }}" alt="">{% else %}<img class="vp-brand-mark" src="{{ 'logo-vinoteca-premium.png' | asset_url }}" alt="">{% endif %}
+<span class="vp-brand-wordmark"><strong>VINOTECA</strong><small>PREMIUM</small></span>
+<img class="vp-header-sticker" src="{{ 'sello-premium.svg' | asset_url }}" alt="Selección premium">
+</a>
+<button class="vp-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+<nav class="vp-nav" aria-label="Navegación principal">
+<a href="{{ routes.root_url }}">Inicio</a><a href="/pages/nosotros">Nosotros</a><a href="/pages/catalogo">Catálogo</a><a href="/pages/variedades">Variedades</a><a href="/pages/maridajes">Maridajes</a><a href="/pages/cultura-del-vino">Cultura del vino</a><a href="/pages/promociones">Promociones</a><a href="/pages/preguntas-frecuentes">Preguntas frecuentes</a><a href="/pages/visitanos">Visítanos</a><a href="/pages/contacto">Contacto</a></nav>
+<div class="vp-header-actions"><a class="vp-header-cta" href="/collections/all">Explorar catálogo</a><a class="vp-cart-link" href="{{ routes.cart_url }}">Carrito ({{ cart.item_count }})</a></div>
+</div></header>
+{% schema %}{"name":"Cabecera Vinoteca","settings":[]}{% endschema %}

@@ -1,0 +1,11 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Saltar al contenido"
+    },
+    "cart": {
+      "title": "Carrito",
+      "checkout": "Finalizar compra"
+    }
+  }
+}

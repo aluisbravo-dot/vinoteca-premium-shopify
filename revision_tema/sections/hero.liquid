@@ -1,0 +1,35 @@
+<section class="vp-hero vp-hero-carousel" aria-label="Presentación Vinoteca Premium">
+  <div class="vp-hero-slides">
+    <article class="vp-hero-slide is-active">
+      <img class="vp-hero-image" src="{{ 'hero-vinedo-atardecer.jpg' | asset_url }}" alt="Viñedos al atardecer">
+      <div class="vp-hero-shade"></div><div class="vp-wrap vp-hero-copy">
+        <p class="vp-eyebrow">VINOTECA PREMIUM · ORIGEN Y TRADICIÓN</p>
+        <h1>El arte de descubrir un buen vino.</h1>
+        <p>Conoce el mundo de las uvas, los viñedos y las variedades que dan personalidad a cada copa.</p>
+        <div class="vp-actions"><a class="vp-btn" href="{{ routes.all_products_collection_url }}">Explorar catálogo</a><a class="vp-btn vp-btn-outline" href="/pages/nosotros">Conócenos</a></div>
+      </div>
+    </article>
+    <article class="vp-hero-slide">
+      <img class="vp-hero-image" src="{{ 'hero-bodega-barricas.jpg' | asset_url }}" alt="Barricas en una bodega">
+      <div class="vp-hero-shade"></div><div class="vp-wrap vp-hero-copy">
+        <p class="vp-eyebrow">CULTURA · BODEGAS · EXPERIENCIA</p>
+        <h1>Una historia que nace en la vid.</h1>
+        <p>Descubre cómo la tierra, las uvas y el cuidado de cada proceso construyen el carácter del vino.</p>
+        <div class="vp-actions"><a class="vp-btn" href="/pages/nosotros">Nuestra historia</a><a class="vp-btn vp-btn-outline" href="/pages/contacto">Contáctanos</a></div>
+      </div>
+    </article>
+    <article class="vp-hero-slide">
+      <img class="vp-hero-image" src="{{ 'hero-brindis.jpg' | asset_url }}" alt="Brindis con copas de vino">
+      <div class="vp-hero-shade"></div><div class="vp-wrap vp-hero-copy">
+        <p class="vp-eyebrow">MARIDAJE · MOMENTOS PARA COMPARTIR</p>
+        <h1>Comparte el gusto por lo auténtico.</h1>
+        <p>Encuentra ideas para acompañar tus comidas y disfrutar cada ocasión con responsabilidad.</p>
+        <div class="vp-actions"><a class="vp-btn" href="{{ routes.all_products_collection_url }}">Ver selección</a><a class="vp-btn vp-btn-outline" href="/pages/contacto">Visítanos</a></div>
+      </div>
+    </article>
+  </div>
+  <button class="vp-hero-arrow vp-hero-prev" type="button" aria-label="Imagen anterior">‹</button>
+  <button class="vp-hero-arrow vp-hero-next" type="button" aria-label="Imagen siguiente">›</button>
+  <div class="vp-hero-dots" aria-label="Seleccionar imagen"><button class="is-active" type="button" aria-label="Mostrar imagen 1"></button><button type="button" aria-label="Mostrar imagen 2"></button><button type="button" aria-label="Mostrar imagen 3"></button></div>
+</section>
+{% schema %}{"name":"Slider principal","settings":[]}{% endschema %}
